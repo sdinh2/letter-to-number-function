@@ -1,0 +1,16 @@
+phone_letters = [" ", "", "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"]
+
+letter = input("Please enter a letter: ")
+
+def let_to_num():
+    key = 0
+    while key < 10:
+        if letter.upper() in phone_letters[key]:
+            print("The letter: \"" + letter + "\" is located at index:",key,"with keys containing \"" + phone_letters[key] + "\"")
+            break
+        else:
+            key = key + 1
+            if letter.isalnum() == False:
+                print("The character chosen: \"" + letter + "\" is \"Not Found")
+                break
+let_to_num()
